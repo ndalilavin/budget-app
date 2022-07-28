@@ -1,21 +1,21 @@
 import React from 'react';
 
 
-function Expense () {
+function Expense ({income, expense}) {
     return (
         <div>
             <div>
                 <h2>Current Balance</h2>
-                <div>$8000</div>
+                <div>${income - expense}</div>
             </div>
             <div>
                 <div>
                     <h2>Income</h2>
-                    <div>$4000</div>
+                    <div>${income}</div>    
                 </div>
                 <div>
                     <h2>Expense</h2>
-                    <div>$1000</div>
+                    <div>${expense}</div>
                 </div>
             </div>
             
