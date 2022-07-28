@@ -5,8 +5,9 @@ function TransactionList({ transactions }) {
         <div>
             <h2>Transaction List</h2>
             <ul>
-                <li>Income - $4000</li>
-                <li>Grocery - $100</li>
+                {
+                    transactions.map((data) => <li key={data.id}> {data.name} ${data.amount} <button>x</button></li>)
+                } 
             </ul>
         </div>
     )
