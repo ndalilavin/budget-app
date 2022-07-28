@@ -26,7 +26,7 @@ function BudgetTracker() {
         <div>
             <h1>Expense Tracker</h1>
             <Expense income={3000} expense={500} />
-            <TransactionList />
+            <TransactionList transactions={transactionData}/>
             <NewTransactionForm />
         </div>
     )

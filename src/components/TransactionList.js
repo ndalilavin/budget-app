@@ -1,6 +1,6 @@
 import React from 'react';
 
-function TransactionList() {
+function TransactionList({ transactions }) {
     return (
         <div>
             <h2>Transaction List</h2>
