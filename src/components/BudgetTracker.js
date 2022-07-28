@@ -2,13 +2,21 @@ import React from 'react';
 import Expense from './Expense';
 import NewTransactionForm from './NewTransactionForm';
 import TransactionList from './TransactionList';
+import { uniqueId } from '../utils';
 
 
 const transactionData = [
     {
-        name: 'Salary', 
-        amount: 3000,
+        id: uniqueId(),
+        name: 'Donation', 
+        amount: 4000,
         type: 'income'
+    },
+    {
+        id: uniqueId(),
+        name: 'Mzinga', 
+        amount: 300,
+        type: 'expense'
     }
 ];
 
