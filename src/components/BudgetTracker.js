@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Expense from './Expense';
 import NewTransactionForm from './NewTransactionForm';
 import TransactionList from './TransactionList';
@@ -22,11 +22,16 @@ const transactionData = [
 
 
 function BudgetTracker() {
+
+    const [income, setIncome] = useState(0);
+    const [expense, setExpense] = useState(0);
+    const [transactions, setTransactions] = useState(transactionData);
+
     return (
         <div>
             <h1>Expense Tracker</h1>
-            <Expense income={3000} expense={500} />
-            <TransactionList transactions={transactionData}/>
+            <Expense income={income} expense={expense} />
+            <TransactionList transactions={transactions}/>
             <NewTransactionForm />
         </div>
     )
