@@ -46,7 +46,12 @@ function BudgetTracker() {
 
         setIncome(income);
         setExpense(expense); 
-        console.log(income, expense)
+    }
+
+    const handleDeleteTransaction = id => {
+        const newTransactions = transactions.filter((item) => item.id != id);
+        setTransactions(newTransactions);
+        
     }
 
     const handleAddNewTransaction = item => {
@@ -67,7 +72,7 @@ function BudgetTracker() {
         <div>
             <h1>Expense Tracker</h1>
             <Expense income={income} expense={expense} />
-            <TransactionList transactions={transactions}/>
+            <TransactionList transactions={transactions} onDeleteTransaction={handleDeleteTransaction}/>
             <NewTransactionForm onNewTransaction={handleAddNewTransaction}/>
         </div>
     )
