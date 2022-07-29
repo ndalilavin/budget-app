@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Expense from './Expense';
 import NewTransactionForm from './NewTransactionForm';
 import TransactionList from './TransactionList';
@@ -17,6 +17,12 @@ const transactionData = [
         name: 'Mzinga', 
         amount: 300,
         type: 'expense'
+    },
+    {
+        id: uniqueId(),
+        name: 'Unga', 
+        amount: 240,
+        type: 'expense'
     }
 ];
 
@@ -34,10 +40,18 @@ function BudgetTracker() {
             if (data.type === 'income') {
                 income += data.amount;
             } else if (data.type === 'expense') {
-                expense += data.amount;
+                expense += data.amount;  
             }
         });
+
+        setIncome(income);
+        setExpense(expense); 
+        console.log(income, expense)
     }
+
+    useEffect(() => {
+        calculateExpenses();
+    }, []);
 
     return (
         <div>
@@ -48,5 +62,6 @@ function BudgetTracker() {
         </div>
     )
 }
+
 
 export default BudgetTracker;
