@@ -27,6 +27,18 @@ function BudgetTracker() {
     const [expense, setExpense] = useState(0);
     const [transactions, setTransactions] = useState(transactionData);
 
+    const calculateExpenses = () => {
+        let income = 0, expense = 0;
+
+        transactionData.forEach((data) => {
+            if (data.type === 'income') {
+                income += data.amount;
+            } else if (data.type === 'expense') {
+                expense += data.amount;
+            }
+        });
+    }
+
     return (
         <div>
             <h1>Expense Tracker</h1>
