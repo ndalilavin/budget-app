@@ -36,7 +36,7 @@ function BudgetTracker() {
     const calculateExpenses = () => {
         let income = 0, expense = 0;
 
-        transactionData.forEach((data) => {
+        transactions.forEach((data) => {
             if (data.type === 'income') {
                 income += data.amount;
             } else if (data.type === 'expense') {
@@ -49,16 +49,26 @@ function BudgetTracker() {
         console.log(income, expense)
     }
 
+    const handleAddNewTransaction = item => {
+        let newTransactions = [...transactions, item];
+
+        setTransactions(newTransactions);
+    }
+
     useEffect(() => {
         calculateExpenses();
     }, []);
+
+    useEffect(() => {
+        calculateExpenses();
+    }, [transactions]);
 
     return (
         <div>
             <h1>Expense Tracker</h1>
             <Expense income={income} expense={expense} />
             <TransactionList transactions={transactions}/>
-            <NewTransactionForm />
+            <NewTransactionForm onNewTransaction={handleAddNewTransaction}/>
         </div>
     )
 }

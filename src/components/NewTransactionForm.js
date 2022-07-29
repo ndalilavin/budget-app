@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { uniqueId } from '../utils';
 
-function NewTransactionForm() {
+function NewTransactionForm( {onNewTransaction} ) {
     const [nameValue, setNameValue] = useState('');
     const [amountValue, setAmountValue] = useState('');
 
-    const addTransaction = type => {  
-        const data = { id: uniqueId(), name:nameValue, amount: amountValue, type: type };
+    const addTransaction = (type, evt) => {  
+        evt.preventDefault();
 
-        console.log(data);
+        const data = { id: uniqueId(), name:nameValue, amount: parseInt(amountValue), type: type };
+
+        onNewTransaction(data);
     }
 
     return (
@@ -30,8 +32,8 @@ function NewTransactionForm() {
                     </div>
                 </label>
                 <div>
-                    <button onClick={() => addTransaction('income')}>Income</button>
-                    <button onClick={() => addTransaction('expense')}>Expense</button>
+                    <button onClick={(e) => addTransaction('income', e)}>Income</button>
+                    <button onClick={(e) => addTransaction('expense', e)}>Expense</button>
                 </div>
             </form>
         </div>
