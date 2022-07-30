@@ -34,7 +34,7 @@ function BudgetTracker() {
     const [transactions, setTransactions] = useState([]);
 
     const getPreviousTrans = async () =>{
-        const resp = await fetch("https://secret-lake-69778.herokuapp.com/transaction_history").then((k)=>k.json())
+        const resp = await fetch("https://intense-woodland-12077.herokuapp.com/transaction_history").then((k)=>k.json())
          console.log("res",resp)
          const k = resp;
          setTransactions(k)
@@ -45,13 +45,12 @@ function BudgetTracker() {
     const getAccountBalance =  async () =>{
 
   
-        const resp = await fetch("https://secret-lake-69778.herokuapp.com/balance").then((k)=>k.json())
+        const resp = await fetch("https://intense-woodland-12077.herokuapp.com/balance" ).then((k)=>k.json())
         console.log("res",resp)
         const l = resp;
         setExpense(l.expenses);
         setIncome(l.income);
-   
-   
+
    
      }
     const calculateExpenses = () => {
