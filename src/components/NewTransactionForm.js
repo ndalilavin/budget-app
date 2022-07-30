@@ -5,10 +5,26 @@ function NewTransactionForm( {onNewTransaction} ) {
     const [nameValue, setNameValue] = useState('');
     const [amountValue, setAmountValue] = useState('');
 
-    const addTransaction = (type, evt) => {  
+    const addTransaction = async (type, evt) => {  
         evt.preventDefault();
 
-        const data = { id: uniqueId(), name:nameValue, amount: parseInt(amountValue), type: type };
+        const rawResponse = await fetch('https://secret-lake-69778.herokuapp.com/transaction_history', {
+                method: 'POST',
+                headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    id: uniqueId(),
+                    name:nameValue,
+                    amount: parseInt(amountValue),
+                    type: type
+            
+                  })
+            });
+            const content = await rawResponse.json();
+
+        const data = { content: content.id, name:content.name, amount:content.amount, type: content.type };
 
         onNewTransaction(data);
     }
