@@ -6,16 +6,16 @@ function Expense ({income, expense}) {
         <div>
             <div>
                 <h2>Current Balance</h2>
-                <div>${income - expense}</div>
+                <div>KES: {income - expense}</div>
             </div>
             <div>
                 <div>
                     <h2>Income</h2>
-                    <div>${income}</div>    
+                    <div>KES: {income}</div>    
                 </div>
                 <div>
                     <h2>Expense</h2>
-                    <div>${expense}</div>
+                    <div>KES: {expense}</div>
                 </div>
             </div>
             

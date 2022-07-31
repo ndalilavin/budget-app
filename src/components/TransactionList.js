@@ -6,7 +6,7 @@ function TransactionList({ transactions, onDeleteTransaction }) {
             <h2>Transaction List</h2>
             <ul>
                 {
-                    transactions.map((data) => <li key={data.id}> {data.name} ${data.amount} 
+                    transactions.map((data) => <li key={data.id}> {data.name} KES: {data.amount} 
                         <button onClick={() => onDeleteTransaction(data.id)}>x</button></li>)
                 } 
             </ul>

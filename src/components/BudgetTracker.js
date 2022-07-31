@@ -33,6 +33,10 @@ function BudgetTracker() {
     const [expense, setExpense] = useState(0);
     const [transactions, setTransactions] = useState([]);
 
+    const saveState = () => {
+        localStorage.setItem('expenseTrackerState', JSON.stringify(transactions));
+    }
+
     const getPreviousTrans = async () =>{
         const resp = await fetch("https://intense-woodland-12077.herokuapp.com/transaction_history").then((k)=>k.json())
          console.log("res",resp)
@@ -44,7 +48,6 @@ function BudgetTracker() {
       
     const getAccountBalance =  async () =>{
 
-  
         const resp = await fetch("https://intense-woodland-12077.herokuapp.com/balance" ).then((k)=>k.json())
         console.log("res",resp)
         const l = resp;
@@ -64,6 +67,8 @@ function BudgetTracker() {
             }
         });
 
+        saveState();
+
         setIncome(income);
         setExpense(expense); 
     }
@@ -81,6 +86,12 @@ function BudgetTracker() {
     }
 
     useEffect(() => {
+        let localState = JSON.parse(localStorage.getItem('expenseTrackerState'));
+        if (localState) {
+            setTransactions(localState);
+        } else {
+            calculateExpenses();
+        }
         calculateExpenses();
         getAccountBalance();
         getPreviousTrans();
