@@ -104,21 +104,15 @@ function BudgetTracker() {
     }, [transactions]);
 
     return (
-        <Router>
+    
             <div>
-                <Navbar />
+                
                 <h1>Expense Tracker</h1>
                 <Expense income={income} expense={expense} />
                 <TransactionList transactions={transactions} onDeleteTransaction={handleDeleteTransaction}/>
                 <NewTransactionForm onNewTransaction={handleAddNewTransaction}/>
             </div>
-{/* 
-        <Routes>
-            <Route exact path="/" element={<BudgetTracker/>}></Route>
-            <Route exact path="/about" element={<About/>}></Route>
-        </Routes> */}
-            
-        </Router>
+
     )
 }
 
