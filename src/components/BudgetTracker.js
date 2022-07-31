@@ -3,6 +3,8 @@ import Expense from './Expense';
 import NewTransactionForm from './NewTransactionForm';
 import TransactionList from './TransactionList';
 import { uniqueId } from '../utils';
+import Navbar from './Navbar';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 
 // const transactionData = [
@@ -102,12 +104,21 @@ function BudgetTracker() {
     }, [transactions]);
 
     return (
-        <div>
-            <h1>Expense Tracker</h1>
-            <Expense income={income} expense={expense} />
-            <TransactionList transactions={transactions} onDeleteTransaction={handleDeleteTransaction}/>
-            <NewTransactionForm onNewTransaction={handleAddNewTransaction}/>
-        </div>
+        <Router>
+            <div>
+                <Navbar />
+                <h1>Expense Tracker</h1>
+                <Expense income={income} expense={expense} />
+                <TransactionList transactions={transactions} onDeleteTransaction={handleDeleteTransaction}/>
+                <NewTransactionForm onNewTransaction={handleAddNewTransaction}/>
+            </div>
+
+        <Routes>
+            <Route exact path="/" element={<Home/>}></Route>
+            <Route exact path="/about" element={<Search/>}></Route>
+        </Routes>
+            
+        </Router>
     )
 }
 

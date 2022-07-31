@@ -1,9 +1,18 @@
 import React from 'react';
 import BudgetTracker from './components/BudgetTracker';
+import Navbar from './Navbar';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
-// Components container
+
 function App() {
-    return <BudgetTracker />
+    return (
+        <Router>
+        <div>
+            <Navbar />
+            <BudgetTracker />
+        </div>
+        </Router>
+    )
 }
 
 export default App;
