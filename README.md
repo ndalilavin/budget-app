@@ -29,6 +29,7 @@
 # Description
 
 <p>This app helps you keep track of your expenses while also showing you latest news updates realted to shopping.</p>
+<p>The app utilizes a News API (https://newsapi.org/v2/everything?q=shopping&apiKey=07764aca70b44596ba2e4886983a4313) and is hosted on Heroku with API: https://intense-woodland-12077.herokuapp.com/balance.
 [Go Back to the top](#online mentoring platform)
 
 ## Features
@@ -98,6 +99,7 @@ SOFTWARE.
 
 # Author's Info
 
-Name: Vinson Steve Ndalila
+Name: Vinson Steve Ndalila. 
+<br/>
 Email: vndalila@gmail.com
 
