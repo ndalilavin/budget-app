@@ -18,6 +18,7 @@ import './newsObject.css';
 
     return (
         <div style={{background: 'orange'}}>
+            <h1 style={{textAlign: 'center', paddingTop: 20, textDecoration: 'underline'}}>Shopping News and Tips</h1>
             {articles.map(article => {
                 return (
                     <NewsObject 
