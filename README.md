@@ -99,5 +99,5 @@ SOFTWARE.
 # Author's Info
 
 Name: Vinson Steve Ndalila
-Email: vndalila@gmauil.com
+Email: vndalila@gmail.com
 
