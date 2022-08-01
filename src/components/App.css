@@ -1,0 +1,54 @@
+input{
+    height: 40px;
+    margin-top: 5px;
+    border: 1px solid grey;
+}
+
+.incomeBtn {
+    background-color: green;
+    margin-right: 15px;
+}
+
+.currentBalance {
+    color: orangered;
+    font-size: 30px;
+}
+
+.expenseBtn {
+    background-color: red;
+}
+
+.transactionCard li{
+    border: 1px solid grey;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.inmwrap {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin: 20px;
+
+}
+
+.incomeDiv {
+    border: 2px solid grey;
+    border-color: green;
+    padding: 10px 15px;
+    margin-right: 10px;
+    
+
+}
+
+.expenseDiv {
+    border: 2px solid grey;
+    border-color: red;
+    padding: 10px;
+    margin-left: 10px;
+
+
+}
+

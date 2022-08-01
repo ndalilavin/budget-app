@@ -105,13 +105,13 @@ function BudgetTracker() {
 
     return (
     
-            <div>
+            <center>
                 
-                <h1>Expense Tracker</h1>
+                <h1 style={{color: 'blue', marginTop: 60}}>Expense Tracker</h1>
                 <Expense income={income} expense={expense} />
                 <TransactionList transactions={transactions} onDeleteTransaction={handleDeleteTransaction}/>
                 <NewTransactionForm onNewTransaction={handleAddNewTransaction}/>
-            </div>
+            </center>
 
     )
 }

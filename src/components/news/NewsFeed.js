@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import NewsObject from "./NewsObject";
 import axios from "axios";
+import './newsObject.css';
 
 
  const NewsFeed = () => {
@@ -16,7 +17,7 @@ import axios from "axios";
     },[])
 
     return (
-        <div>
+        <div style={{background: 'orange'}}>
             {articles.map(article => {
                 return (
                     <NewsObject 

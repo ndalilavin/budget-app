@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { uniqueId } from '../utils';
+import './App.css';
 
 function NewTransactionForm( {onNewTransaction} ) {
     const [nameValue, setNameValue] = useState('');
@@ -32,24 +33,19 @@ function NewTransactionForm( {onNewTransaction} ) {
     return (
         <div>
             <h2>Add New Transaction</h2>
-            <form>
-                <label>
-                    Name
+            <form className='form1'> 
                     <div>
-                        <input type="text" value={nameValue}
+                        <input type="text" placeholder="Name" value={nameValue}
                             onChange={(e) => setNameValue(e.target.value)} />
-                    </div>
-                </label>
-                <label>
-                    Amount
+                    </div> <br/>
+
                     <div>
-                        <input type="number" value={amountValue} 
-                            onChange={(e) => setAmountValue(e.target.value)} />
-                    </div>
-                </label>
-                <div>
-                    <button onClick={(e) => addTransaction('income', e)}>Income</button>
-                    <button onClick={(e) => addTransaction('expense', e)}>Expense</button>
+                        <input type="number" placeholder="Amount" value={amountValue} 
+                            onChange={(e) => setAmountValue(e.target.value)} /></div> <br/>
+
+                <div className='transaction-btn'>
+                    <button className="incomeBtn" onClick={(e) => addTransaction('income', e)}>Income</button> 
+                    <button className="expenseBtn" onClick={(e) => addTransaction('expense', e)}>Expense</button>
                 </div>
             </form>
         </div>
