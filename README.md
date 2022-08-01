@@ -71,6 +71,9 @@ You may also see any lint errors in the console.
 https://ndalilavin.github.io/expense-tracker/
  [Go Back to the top](#online mentoring platform)
 
+ ### Known Bugs
+- The netflify-deployed site takes time to fetch data from the News API to the News/Tips page.
+- Form doesn't always refresh data on submit.
  
 ### LIcence
 
