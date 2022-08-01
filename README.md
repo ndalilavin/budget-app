@@ -14,13 +14,11 @@
 
 -[Features](#features)
 
--[Requirements](#requirements)
+-[Installation](#requirements)
 
 -[Tecnology Used](#technology-used)
 
 -[Live Link](#live-link)
-
--[Figma Link](#figma-link)
 
 -[Licence](#licence)
 
@@ -61,11 +59,10 @@ You may also see any lint errors in the console.
 # Technology Used
 
 1. HTML - Which was used to delope the structure of the page.
-2. 
-3. CSS - Which was used to style the user interface.
-4. 
-5. Javascript- Which was used to make the page interactive.
-6. 
+2. CSS - Which was used to style the user interface.
+3. React.js (Javascript library)- Which was used to create the UI and make it interactive.
+4. Heroku Server
+5. Netflify 
 [Go Back to the top](#online mentoring platform)
 
 ## Live Link
