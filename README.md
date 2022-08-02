@@ -29,7 +29,8 @@
 <p>This app helps you keep track of your expenses while also showing you latest news updates realted to shopping.</p>
 <p>The project consists of two repositories; This front-end repository, https://github.com/ndalilavin/expense-tracker, hosted on Netlify (https://sparkly-pavlova-5b9595.netlify.app/) and a back-end repository, https://github.com/ndalilavin/expense-tracker-backend, hosted on Heroku at https://intense-woodland-12077.herokuapp.com/.</p>
 <p>The app utilizes a News API (https://newsapi.org/v2/everything?q=shopping&apiKey=07764aca70b44596ba2e4886983a4313) and is hosted on Heroku with API: https://intense-woodland-12077.herokuapp.com/balance.
-[Go Back to the top](#online mentoring platform)
+
+[Go Back to the top](#)
 
 ## Features
 
@@ -39,7 +40,7 @@ As a user of this programm you will be able to :
 3. View balance after expenses
 [Go Back to the top](#online mentoring platform)
 
-[Go Back to the top](#online mentoring platform)
+[Go Back to the top](#)
 # Installation Instructions
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -64,13 +65,15 @@ You may also see any lint errors in the console.
 3. React.js (Javascript library)- Which was used to create the UI and make it interactive.
 4. Heroku Server
 5. Netflify 
-[Go Back to the top](#online mentoring platform)
+
+[Go Back to the top](#)
 
 ## Live Link
 
  -Clink this link to view the live application
 https://ndalilavin.github.io/expense-tracker/
- [Go Back to the top](#online mentoring platform)
+
+ [Go Back to the top](#)
 
  ### Known Bugs
 - The netflify-deployed site takes time to fetch data from the News API to the News/Tips page.
@@ -96,11 +99,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[Go Back to the top](#online mentoring platform)
+[Go Back to the top](#)
 
-# Author's Info
+# Author's Info:
 
-Name: Vinson Steve Ndalila. 
+Name: Vinson S N. 
 <br/>
 Email: vndalila@gmail.com
 
