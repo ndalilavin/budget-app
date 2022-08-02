@@ -27,6 +27,7 @@
 # Description
 
 <p>This app helps you keep track of your expenses while also showing you latest news updates realted to shopping.</p>
+<p>The project consists of two repositories; This front-end repository, https://github.com/ndalilavin/expense-tracker, hosted on Netlify (https://sparkly-pavlova-5b9595.netlify.app/) and a back-end repository, https://github.com/ndalilavin/expense-tracker-backend, hosted on Heroku at https://intense-woodland-12077.herokuapp.com/.</p>
 <p>The app utilizes a News API (https://newsapi.org/v2/everything?q=shopping&apiKey=07764aca70b44596ba2e4886983a4313) and is hosted on Heroku with API: https://intense-woodland-12077.herokuapp.com/balance.
 [Go Back to the top](#online mentoring platform)
 
